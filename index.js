@@ -36,9 +36,22 @@ console.log(cualcularCosteAvion(ciudad))
 // 4 .Recoge el precio fuera de la función en una variable llamada costeCoche y
 // 5. comprueba que el cálculo es correcto
 
+const diasDeAlquilerCoche = prompt("¿Cuantos días quieres alquilar un coche?");
+const costePorDiaAlquilerCoche = 40;
 
+function calcularCosteCoche(diasDeAlquilerCoche){
+    let costeTotalCoche =  diasDeAlquilerCoche * costePorDiaAlquilerCoche;
+    if(diasDeAlquilerCoche >= 7){
+        return costeTotalCoche - 50;
+    } else if(diasDeAlquilerCoche >= 3){
+    return costeTotalCoche - 20;
+    }
+    else{
+        return costeTotalCoche;
+    }
+}
 
-
+console.log(calcularCosteCoche(diasDeAlquilerCoche, costePorDiaAlquilerCoche))
 // Interación 4:
 // 1.Crea otra funcion llamada `calcularCosteViaje()` que tendrá las siguientes características:
 // - Recibirá como parámetros de entrada: número de noches, ciudad y días de alquiler
