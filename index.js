@@ -7,7 +7,7 @@ function calcularPrecioNoche(noches,cadanoche){
   
     return costeHotel;
 }
-console.log(calcularPrecioNoche(noches,cadanoche));
+//console.log(calcularPrecioNoche(noches,cadanoche));
 
 const ciudad = prompt("¿Qué ciudad te gustaría visitar?").toLowerCase();
 const costeParis = 180;
@@ -24,7 +24,7 @@ function calcularCosteAvion(ciudad){
         return costeLondres;
     
 }
-console.log(calcularCosteAvion(ciudad))
+//console.log(calcularCosteAvion(ciudad))
 
 const diasDeAlquilerCoche = prompt("¿Cuantos días quieres alquilar un coche?");
 const costePorDiaAlquilerCoche = 40;
@@ -41,13 +41,13 @@ function calcularCosteCoche(diasDeAlquilerCoche){
     }
 }
 
-console.log(calcularCosteCoche(diasDeAlquilerCoche, costePorDiaAlquilerCoche))
+//console.log(calcularCosteCoche(diasDeAlquilerCoche, costePorDiaAlquilerCoche))
 
 function calcularCosteViaje(noches, ciudad, diasDeAlquilerCoche){
     const totalHotel = calcularPrecioNoche(noches, cadanoche);
     const totalAvion = calcularCosteAvion(ciudad);
     const totalCoche = calcularCosteCoche(diasDeAlquilerCoche);
-    const totalDelViaje = Number(totalHotel )+ Number(totalAvion )+ Number(totalCoche);
+    const totalDelViaje = Number(totalHotel)+ Number(totalAvion)+ Number(totalCoche);
 
     window.alert(`El coste total del viaje es: $${totalDelViaje}`);
 }
