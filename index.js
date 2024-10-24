@@ -1,3 +1,4 @@
+// Función para calcular el coste por noche
 
 const noches = prompt("¿Cuantas noches te quieres quedar?");
 const cadanoche = 60;
@@ -8,6 +9,9 @@ function calcularPrecioNoche(noches,cadanoche){
     return costeHotel;
 }
 //console.log(calcularPrecioNoche(noches,cadanoche));
+
+
+// Función para calcular el coste del vuelo segun la ciudad
 
 const ciudad = prompt("¿Qué ciudad te gustaría visitar?").toLowerCase();
 const costeParis = 180;
@@ -26,6 +30,8 @@ function calcularCosteAvion(ciudad){
 }
 //console.log(calcularCosteAvion(ciudad))
 
+// Función para calcular el coste de alquiler por día de un coche (Incluyendo descuentos segun la cantidad de días)
+
 const diasDeAlquilerCoche = prompt("¿Cuantos días quieres alquilar un coche?");
 const costePorDiaAlquilerCoche = 40;
 
@@ -42,6 +48,8 @@ function calcularCosteCoche(diasDeAlquilerCoche){
 }
 
 //console.log(calcularCosteCoche(diasDeAlquilerCoche, costePorDiaAlquilerCoche))
+
+// Función para calcular el coste total del viaje teniendo en cuenta las funciones anteriores 
 
 function calcularCosteViaje(noches, ciudad, diasDeAlquilerCoche){
     const totalHotel = calcularPrecioNoche(noches, cadanoche);
